@@ -18,7 +18,7 @@ pipeline {
 
         stage ('Prepare Dependencies') {
             steps {
-                sh 'mv .env-sample .env'
+                sh 'mv .env.sample .env'
                 sh 'composser install'
                 sh 'php artisan migrate'
                 sh 'php artisan key:generate'
