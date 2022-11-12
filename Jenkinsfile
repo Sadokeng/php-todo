@@ -58,7 +58,7 @@ pipeline {
 
         stage ('SonarQube Quality Gate') {
             environment {
-                scannerHome = 'sonarqubeScanner'
+                scannerHome = tool 'sonarqubeScanner'
             }
             steps {
                 withSonarQubeEnv('sonarqube') {
